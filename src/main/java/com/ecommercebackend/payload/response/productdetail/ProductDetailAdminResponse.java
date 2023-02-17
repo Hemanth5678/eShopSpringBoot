@@ -1,0 +1,19 @@
+package com.ecommercebackend.payload.response.productdetail;
+
+import com.ecommercebackend.payload.response.product.ProductAdminResponse;
+import com.ecommercebackend.payload.response.productvariant.ProductVariantResponse;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Getter
+@Setter
+@Builder
+public class ProductDetailAdminResponse implements Serializable{
+    private ProductAdminResponse product;
+    private List<ProductVariantResponse> colors;
+}
